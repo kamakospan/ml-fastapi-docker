@@ -160,3 +160,9 @@ docker rm ml-api
 - **The model is an artifact.** `train.py` produces `model.joblib`, and `main.py` only loads it, once at startup. Training and serving are separate.
 - **Model serving.** A client sends JSON, the API validates it with Pydantic, runs `model.predict`, and returns JSON.
 - **Reproducible deployment.** The Docker image contains the code, the pinned dependencies and the runtime config, so the service runs the same way on any machine.
+
+---
+
+## SIS-3: continuation (MLflow + Streamlit)
+
+The SIS-3 extension of this project is in [`sis3/`](sis3/). It adds MLflow experiment tracking and the Model Registry, serves registered models through FastAPI, and has a Streamlit UI for comparing models. Docker Compose runs the full system with `cd sis3 && docker compose up --build`.

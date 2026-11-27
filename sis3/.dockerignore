@@ -1,0 +1,10 @@
+mlflow.db
+mlruns/
+mlartifacts/
+__pycache__/
+**/__pycache__/
+.venv/
+venv/
+.git/
+*.zip
+screenshots/
